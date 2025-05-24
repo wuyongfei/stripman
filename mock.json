@@ -1,0 +1,148 @@
+{
+    "matrix": {
+        "99999999": {
+            "imageWidth": 800,
+            "imageHeight": 600,
+            "cline": [
+                360,
+                230,
+                16,
+                40
+            ],
+            "tline": [
+                420,
+                230,
+                16,
+                40
+            ],
+            "remedyRect": [
+                270,
+                190,
+                240,
+                120
+            ],
+            "remedyCardGValue": 2236800,
+            "maxOfRectC": 2400000
+        },
+        "12345678": {
+            "imageWidth": 800,
+            "imageHeight": 600,
+            "cline": [
+                360,
+                230,
+                16,
+                40
+            ],
+            "tline": [
+                420,
+                230,
+                16,
+                40
+            ],
+            "remedyRect": [
+                270,
+                190,
+                240,
+                120
+            ],
+            "remedyCardGValue": 22368,
+            "maxOfRectC": 24000
+        }
+    },
+    "batch": {
+        "9123785411147": "batch 1 from IBM",
+        "9123785411152": "batch 2 from Apple",
+        "9123785413157": "batch 3 from Google"
+    },
+    "apiKeys": [
+        "8d524cbefcec90a364b2cdfbbb8dbf54821f181d25faf18e839d9d86c6a3cd3c",
+        "c828047d74ac3c1381c1de7769bf5472f8e6c8c2ef6b5a6a176eb920f93bc634"
+    ],
+    "barcode_generator": "https://barcode.tec-it.com/zh/GS1DigitalLink_DataMatrix",
+    "concentration": [
+        {
+            "id": "9123785411147",
+            "supplier_id": "123456789",
+            "supplier_name": "恒瑞生物",
+            "supplier_shortname": "恒瑞生物",
+            "product_id": "12",
+            "product_name": "心肌肌钙蛋白I（cTnI）",
+            "product_desc": "心肌肌钙蛋白（cardiac troponin，cTn）是心肌肌肉收缩的调节蛋白。cTn是由三种不同基因的\n亚基组成：心肌肌钙蛋白T（cTnT）、心肌肌钙蛋白I（cTn I）和肌钙蛋白C（TnC）。用于ACS实验室诊断的是cTnT和cTnI。\n正常情况下外周血cTnI的水平很低：(0 ~ 0.3 μg/L)，AMI发作后，由于其分子量小，很快释放人血，浓度迅速升高。Zaninotto等以1μg/L I）和肌钙\n蛋白C（TnC）。用于ACS实验室诊断的是cTnT和cTnI。\n作为阳性诊断临界值，可疑AMI的病人诊断率可达94.3%，诊断特异性为100%。\n正常情况下外周血cTnT参考值：①0.02 ～ 0.13 μg/L.② > 0.2 μg/L为临界值。③ > 0.5 μg/L可以诊断AMI.\ncTn对急性胸痛病人(无论有无骨骼肌损伤)的诊断均优于CK-MB。研究表明：在对AMI的诊断方面cTnI和cTnT无显著差异，都能鉴别出CK-MB所不能检测\n出的心肌损伤。相对cTnT而言，cTnI显示出较低的初始灵敏性和较高的特异性。就上升的相对值来说，cTnT比cTnI高；在不稳定心绞痛病人中cTnT上\n升的频度比cTnI高。在AMI后30天死亡率的预报方面，cTnT优于cTnI。",
+            "production_date": "2021-10-10",
+            "publish_date": "2021-11-10",
+            "expiry_date": "2023-10-09",
+            "incubation_min": 300,
+            "incubation_max": 600,
+            "concentration_unit": "ml/L",
+            "concentrations": [
+                [500, 0.1],
+                [1000, 0.2],
+                [1500, 0.3],
+                [3000, 0.4],
+                [5000, 0.5],
+                [8000, 0.6]
+            ],
+            "concentrations_descr": [
+                [-1, 0.3, "正常"],
+                [0.3, 0.5, "偏高"],
+                [0.6, -1, "超高"]
+            ]
+        },
+        {
+            "id": "9123785411152",
+            "supplier_id": "785",
+            "supplier_name": "武汉健民",
+            "supplier_shortname": "武汉健民",
+            "product_id": "23",
+            "product_name": "降钙素原（PCT）",
+            "product_desc": "PCT（降钙素原，procalcitonin）是一种蛋白质，当严重细菌、真菌、寄生虫感染以及脓毒症和多脏器功能衰竭时它在血浆中的水平升高。\n自身免疫、过敏和病毒感染时PCT不会升高。\n局部有限的细菌感染、轻微的感染和慢性炎症不会导致其升高。细菌内毒素在诱导过程中担任了至关重要的作用。PCT反映了全身炎症反应的活跃程度。影响PCT水平的\n因素包括被感染器官的大小和类型、细菌的种类、炎症的程度和免疫反应的状况。另外，PCT只是在少数患者的大型外科术后1~4d可以测到。PCT水平的升高出现在严重\n休克、全身性炎症反应综合征（SIRS）和多器官功能紊乱综合征（MODS），即使没有细菌感染或细菌性病灶。\n但是，在这些病例中PCT水平通常低于那些有细菌性病灶的患者。从肠道释放细胞因子或细菌移位可能引起诱导。\n参见：https://baike.baidu.com/item/PCT/6833155",
+            "production_date": "2021-10-10",
+            "publish_date": "2021-11-10",
+            "expiry_date": "2023-10-09",
+            "incubation_min": 180,
+            "incubation_max": 480,
+            "concentration_unit": "ml/L",
+            "concentrations": [
+                [500, 0.1],
+                [1000, 0.2],
+                [1500, 0.3],
+                [3000, 0.4],
+                [5000, 0.5],
+                [8000, 0.6]
+            ],
+            "concentrations_desc": [
+                [-1, 0.3, "正常"],
+                [0.3, 0.5, "偏高"],
+                [0.6, -1, "超高"]
+            ]
+        },
+        {
+            "id": "9123785413157",
+            "supplier_id": "781",
+            "supplier_name": "南京基蛋",
+            "supplier_shortname": "南京基蛋",
+            "product_id": "45",
+            "product_name": "C反应蛋白（CRP）",
+            "product_desc": "C-反应蛋白（C-reactive protein，CRP）是在机体受到感染或组织损伤时血浆中一些急剧上升的蛋白质（急性蛋白），激活补体和加强吞噬细胞的\n吞噬而起调理作用，清除入侵机体的病原微生物和损伤，坏死，凋亡的组织细胞。\n（1）各种急性炎症、组织损伤、心肌梗死、手术创伤、放射性损伤等疾病发作后数小时迅速升高，并有成倍增长之势。病变好转时，又迅速降至正常，\n其升高幅度与感染的程度呈正相关。手术后患者CRP升高，术后7~10天CRP水平应下降，如CRP不降低或再次升高，提示可能并发感染或血栓栓塞。\n（2）CRP与其他炎症因子,如白细胞总数、红细胞沉降率和多形核白细胞等具有密切相关性。又与WBC存在正相关。在炎症反应中起着积极作用，使\n人体具有非特异性抵抗力。在患者疾病发作时，可早于WBC而上升，恢复正常也很快，故具有极高的敏感性。\n（3）帮助辨别呼吸道感染类型。CRP可用于细菌和病毒感染的鉴别诊断：细菌感染时，CRP水平升高；而病毒感染时，CRP不升高或轻度升高，因此CRP\n值可以帮助医生辨别呼吸道感染的类型，有针对性的给予药物和治疗。\n（4）恶性肿瘤患者CRP都升高，如CRP与AFP的联合检测，可用于肝癌与肝脏良性疾病的鉴别诊断，应用于肝癌疗效及预后的判断。手术前CRP上升，手\n术后则下降，且其反应不受放疗、化疗和皮质激素治疗的影响，有助于评估肿瘤的进程。\n（5）评估急性胰腺炎的严重程度，当CRP高于250mg/L时，则提示为广泛坏死性胰腺炎。\n（6）用超敏乳胶增强法测CRP，能提高测定的敏感性，可用于冠心病和心梗危险性的预测。\n参见：https://baike.baidu.com/item/C-%E5%8F%8D%E5%BA%94%E8%9B%8B%E7%99%BD/3857002\n参见：https://www.okaybio.com/crp/crp-clinical-significance/ \n",
+            "production_date": "2021-10-10",
+            "publish_date": "2021-11-10",
+            "expirydate": "2023-10-09",
+            "incubation_min": 240,
+            "incubation_max": 540,
+            "concentration_unit": "ml/L",
+            "concentrations": [
+                [500, 0.1],
+                [1000, 0.2],
+                [1500, 0.3],
+                [3000, 0.4],
+                [5000, 0.5],
+                [8000, 0.6]
+            ],
+            "concentrations_desc": [
+                [-1, 0.3, "正常"],
+                [0.3, 0.5, "偏高"],
+                [0.6, -1, "超高"]
+            ]
+        }
+    ]
+}

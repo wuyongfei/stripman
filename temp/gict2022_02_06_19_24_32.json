@@ -1,0 +1,313 @@
+{
+    "custcontrol": {
+        "tablename": "custcontrol",
+        "description": "用于登录等管理的表",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "customerid",
+        "model": {
+            "customerid": 0,
+            "name": null,
+            "password": null,
+            "sessionid": null,
+            "expiry": null,
+            "securitykey": null
+        }
+    },
+    "custlog": {
+        "tablename": "custlog",
+        "description": "客户行为记录",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customerid": 0,
+            "eventtype": "",
+            "event": "",
+            "timestamp": null,
+            "location": null,
+            "memo": null
+        }
+    },
+    "customers": {
+        "tablename": "customers",
+        "description": "试纸卡用户/手机app用户",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customername": "",
+            "street": null,
+            "city": null,
+            "province": null,
+            "postalcode": null,
+            "idtype": null,
+            "idno": null,
+            "registerdate": null,
+            "healthcardno": null,
+            "memo": null,
+            "agentid": 0,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "other": null,
+            "birthdate": null
+        }
+    },
+    "custreadings": {
+        "tablename": "custreadings",
+        "description": "客户用卡记录",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customerid": 0,
+            "stripid": 0,
+            "reading": 0,
+            "temperature": 0,
+            "location": null,
+            "pixel": null,
+            "timestamp": null,
+            "memo": null,
+            "striptypeid": 0
+        }
+    },
+    "roles": {
+        "tablename": "roles",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "role": null,
+            "descr": null,
+            "createdby": 0,
+            "createdate": null
+        }
+    },
+    "sellers": {
+        "tablename": "sellers",
+        "description": "试纸卡经销商",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "name": "",
+            "street": "",
+            "city": "",
+            "province": null,
+            "postalcode": null,
+            "contact": null,
+            "title": null,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "website": null,
+            "status": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "memo": null
+        }
+    },
+    "stripbatches": {
+        "tablename": "stripbatches",
+        "description": "试纸卡批号",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "vendorstripid": 0,
+            "batchno": "",
+            "upc": null,
+            "memo": null,
+            "pack": null,
+            "storage": null,
+            "algrith": null,
+            "productiondate": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "deleted": false
+        }
+    },
+    "strips": {
+        "tablename": "strips",
+        "description": "试纸卡",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "batchid": 0,
+            "upc": "",
+            "productiondate": null,
+            "expirydate": null,
+            "totalunits": 0,
+            "unitsused": 0,
+            "memo": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "deleted": false,
+            "buydate": null,
+            "buyerid": 0,
+            "unitprice": 0,
+            "cost": 0,
+            "sellerid": 0,
+            "shipdate": null
+        }
+    },
+    "striptypes": {
+        "tablename": "striptypes",
+        "description": "试纸卡类别",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "strip": "",
+            "stripen": null,
+            "usage": "",
+            "usageen": null,
+            "memo": null,
+            "createdy": 0,
+            "createdate": null,
+            "updatedy": 0,
+            "updatedate": null,
+            "deleted": false
+        }
+    },
+    "userprofile": {
+        "tablename": "userprofile",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "fullname": "",
+            "title": null,
+            "dept": null,
+            "street": "",
+            "city": "",
+            "province": null,
+            "postalcode": null,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "Other": null,
+            "website": null,
+            "status": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "memo": null
+        }
+    },
+    "userroles": {
+        "tablename": "userroles",
+        "description": "用户角色表",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "userid",
+        "model": {
+            "userid": 0,
+            "roleid": 0,
+            "createdby": 0,
+            "createdate": null
+        }
+    },
+    "users": {
+        "tablename": "users",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "username": "",
+            "password": "",
+            "enabled": null,
+            "loggedOn": null,
+            "logggedoff": null,
+            "retris": null,
+            "mustchangepwd": null,
+            "locked": null,
+            "vendorid": 0
+        }
+    },
+    "usertable": {
+        "tablename": "usertable",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "userId",
+        "model": {
+            "userId": 0,
+            "username": "",
+            "password": ""
+        }
+    },
+    "vendors": {
+        "tablename": "vendors",
+        "description": "试纸卡厂家或代理商",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "name": "",
+            "street": "",
+            "city": "",
+            "province": null,
+            "postalcode": null,
+            "contact": null,
+            "title": null,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "website": null,
+            "status": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "memo": null
+        }
+    },
+    "vendorstrips": {
+        "tablename": "vendorstrips",
+        "description": "胶体金试纸卡",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "striptypeid": 0,
+            "vendorid": 0,
+            "licenseno": "",
+            "issedby": "",
+            "issueddate": null,
+            "memo1": null,
+            "memo2": null,
+            "udfdate1": null,
+            "udfdate2": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedy": 0,
+            "updatedate": null,
+            "deleted": false
+        }
+    }
+}

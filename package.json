@@ -1,0 +1,39 @@
+{
+  "name": "jwt2",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": ".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rediscli": "node ./node_modules/redis-cli/bin/rdcli -h 192.168.2.36",
+    "devserver": "nodemon authServer.js",
+    "valiserver": "nodemon validateToken.js",
+    "dbServer": "nodemon dbServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.5",
+    "chance": "^1.1.8",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15",
+    "redis-cli": "^2.1.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.28.6",
+    "express": "^4.17.2",
+    "jshint": "^2.13.1",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.4.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "pizzip": "^3.1.1",
+    "redis": "^4.0.1",
+    "rotating-file-stream": "^3.0.2",
+    "sequelize": "^6.15.0"
+  }
+}

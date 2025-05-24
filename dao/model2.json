@@ -1,0 +1,157 @@
+{
+    "custcontrol": {
+        "tablename": "custcontrol",
+        "description": "用于登录等管理的表",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "customerid",
+        "model": {
+            "customerid": 0,
+            "name": null,
+            "password": null,
+            "sessionid": null,
+            "expiry": null,
+            "securitykey": null
+        }
+    },
+    "custlog": {
+        "tablename": "custlog",
+        "description": "客户行为记录",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customerid": 0,
+            "eventtype": "",
+            "event": "",
+            "timestamp": null,
+            "location": null,
+            "memo": null
+        }
+    },
+    "customers": {
+        "tablename": "customers",
+        "description": "试纸卡用户/手机app用户",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customername": "",
+            "street": null,
+            "city": null,
+            "province": null,
+            "postalcode": null,
+            "idtype": null,
+            "idno": null,
+            "registerdate": null,
+            "healthcardno": null,
+            "memo": null,
+            "agentid": 0,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "other": null,
+            "birthdate": null
+        }
+    },
+    "custreadings": {
+        "tablename": "custreadings",
+        "description": "客户用卡记录",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customerid": 0,
+            "stripid": 0,
+            "reading": 0,
+            "temperature": 0,
+            "location": null,
+            "pixel": null,
+            "timestamp": null,
+            "memo": null,
+            "striptypeid": 0
+        }
+    },
+    "roles": {
+        "tablename": "roles",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "role": null,
+            "descr": null,
+            "createdby": 0,
+            "createdate": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, role, descr, createdby, createdate FROM roles WHERE ?? = ?",
+            "SelectAll": "SELECT id, role, descr, createdby, createdate FROM roles",
+            "SelectById": "SELECT id, role, descr, createdby, createdate FROM roles WHERE id = ?",
+            "Paging": "SELECT id, role, descr, createdby, createdate FROM roles ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM roles WHERE ?? = ?",
+            "Insert": "INSERT INTO roles SET ?",
+            "UpdateAny": "UPDATE roles SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM roles",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM roles WHERE {condition}"
+        }
+    },
+    "users": {
+        "tablename": "users",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "username": "",
+            "password": "",
+            "enabled": true,
+            "loggedOn": null,
+            "logggedoff": null,
+            "retris": 0,
+            "mustchangepwd": false,
+            "locked": false,
+            "vendorid": 0
+        },
+        "query": {
+            "SelectAny": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users WHERE ?? = ?",
+            "SelectAll": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users",
+            "SelectById": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users WHERE id = ?",
+            "Paging": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM users WHERE ?? = ?",
+            "Insert": "INSERT INTO users SET ?",
+            "UpdateAny": "UPDATE users SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM users",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM users WHERE {condition}"
+        }
+    },
+    "userroles": {
+        "tablename": "userroles",
+        "description": "用户角色表",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": ["userid", "roleid"],
+        "model": {
+            "userid": 0,
+            "roleid": 0,
+            "createdby": 0,
+            "createdate": null
+        },
+        "query": {
+            "SelectAny": "SELECT userid, roleid, createdby, createdate FROM userroles WHERE ?? = ?",
+            "SelectAll": "SELECT userid, roleid, createdby, createdate FROM userroles",
+            "SelectById": "SELECT userid, roleid, createdby, createdate FROM userroles WHERE id = ?",
+            "Paging": "SELECT userid, roleid, createdby, createdate FROM userroles ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM userroles WHERE ?? = ?",
+            "Insert": "INSERT INTO userroles SET ?",
+            "UpdateAny": "UPDATE userroles SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM userroles",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM userroles WHERE {condition}"
+        }
+    }
+}

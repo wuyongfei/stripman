@@ -1,0 +1,42 @@
+{
+    "appenders": {
+        "out": {
+            "type": "console",
+            "layout": {
+                "type": "pattern",
+                "pattern": "%d{ABSOLUTETIME} %-5p %m",
+                "tokens": {}
+            }
+        },
+        "app": {
+            "type": "file",
+            "filename": "log/server.log",
+            "maxLogSize": 20480,
+            "backups": 3,
+            "category": "server"
+        },
+        "dat": {
+            "type": "dateFile",
+            "filename": "log/applog",
+            "pattern": "_yyyyMMdd.log",
+            "alwaysIncludePattern": true,
+            "backups": 30,
+            "category": "applog",
+            "layout": {
+                "type": "pattern",
+                "pattern": "%d{ABSOLUTETIME} %-5p %m",
+                "tokens": {}
+            }
+        }
+    },
+
+    "categories": {
+        "default": {
+            "appenders": ["out", "dat"], "level": "trace"
+        },
+        "server":{
+            "appenders": ["app"], "level": "debug"
+        }
+  }
+}
+

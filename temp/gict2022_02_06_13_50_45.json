@@ -1,0 +1,598 @@
+{
+    "custcontrol": {
+        "tablename": "custcontrol",
+        "description": "用于登录等管理的表",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "customerid",
+        "model": {
+            "customerid": 0,
+            "name": null,
+            "password": null,
+            "sessionid": null,
+            "expiry": null,
+            "securitykey": null
+        },
+        "query": {
+            "SelectAny": "SELECT customerid, name, password, sessionid, expiry, securitykey FROM custcontrol WHERE ?? = ?",
+            "SelectAll": "SELECT customerid, name, password, sessionid, expiry, securitykey FROM custcontrol",
+            "SelectById": "SELECT customerid, name, password, sessionid, expiry, securitykey FROM custcontrol WHERE id = ?",
+            "Paging": "SELECT customerid, name, password, sessionid, expiry, securitykey FROM custcontrol ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM custcontrol WHERE ?? = ?",
+            "Insert": "INSERT INTO custcontrol SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO custcontrol (customerid, name, password, sessionid, expiry, securitykey) VALUES (?, ?, ?, ?, ?, ?)",
+                "item": "[item.customerid, item.name, item.password, item.sessionid, item.expiry, item.securitykey]"
+            },
+            "Update": {
+                "sql": "UPDATE custcontrol SET customerid = ?, name = ?, password = ?, sessionid = ?, expiry = ?, securitykey = ? WHERE id = ?",
+                "item": "[item.customerid, item.name, item.password, item.sessionid, item.expiry, item.securitykey, id]"
+            },
+            "UpdateAny": "UPDATE custcontrol SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM custcontrol",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM custcontrol WHERE {condition}"
+        }
+    },
+    "custlog": {
+        "tablename": "custlog",
+        "description": "客户行为记录",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customerid": 0,
+            "eventtype": "",
+            "event": "",
+            "timestamp": null,
+            "location": null,
+            "memo": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, customerid, eventtype, event, timestamp, location, memo FROM custlog WHERE ?? = ?",
+            "SelectAll": "SELECT id, customerid, eventtype, event, timestamp, location, memo FROM custlog",
+            "SelectById": "SELECT id, customerid, eventtype, event, timestamp, location, memo FROM custlog WHERE id = ?",
+            "Paging": "SELECT id, customerid, eventtype, event, timestamp, location, memo FROM custlog ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM custlog WHERE ?? = ?",
+            "Insert": "INSERT INTO custlog SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO custlog (customerid, eventtype, event, timestamp, location, memo) VALUES (?, ?, ?, ?, ?, ?)",
+                "item": "[item.customerid, item.eventtype, item.event, item.timestamp, item.location, item.memo]"
+            },
+            "Update": {
+                "sql": "UPDATE custlog SET customerid = ?, eventtype = ?, event = ?, timestamp = ?, location = ?, memo = ? WHERE id = ?",
+                "item": "[item.customerid, item.eventtype, item.event, item.timestamp, item.location, item.memo, id]"
+            },
+            "UpdateAny": "UPDATE custlog SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM custlog",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM custlog WHERE {condition}"
+        }
+    },
+    "customers": {
+        "tablename": "customers",
+        "description": "试纸卡用户/手机app用户",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customername": "",
+            "street": null,
+            "city": null,
+            "province": null,
+            "postalcode": null,
+            "idtype": null,
+            "idno": null,
+            "registerdate": null,
+            "healthcardno": null,
+            "memo": null,
+            "agentid": 0,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "other": null,
+            "birthdate": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, customername, street, city, province, postalcode, idtype, idno, registerdate, healthcardno, memo, agentid, mobile, phone, email, other, birthdate FROM customers WHERE ?? = ?",
+            "SelectAll": "SELECT id, customername, street, city, province, postalcode, idtype, idno, registerdate, healthcardno, memo, agentid, mobile, phone, email, other, birthdate FROM customers",
+            "SelectById": "SELECT id, customername, street, city, province, postalcode, idtype, idno, registerdate, healthcardno, memo, agentid, mobile, phone, email, other, birthdate FROM customers WHERE id = ?",
+            "Paging": "SELECT id, customername, street, city, province, postalcode, idtype, idno, registerdate, healthcardno, memo, agentid, mobile, phone, email, other, birthdate FROM customers ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM customers WHERE ?? = ?",
+            "Insert": "INSERT INTO customers SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO customers (customername, street, city, province, postalcode, idtype, idno, registerdate, healthcardno, memo, agentid, mobile, phone, email, other, birthdate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.customername, item.street, item.city, item.province, item.postalcode, item.idtype, item.idno, item.registerdate, item.healthcardno, item.memo, item.agentid, item.mobile, item.phone, item.email, item.other, item.birthdate]"
+            },
+            "Update": {
+                "sql": "UPDATE customers SET customername = ?, street = ?, city = ?, province = ?, postalcode = ?, idtype = ?, idno = ?, registerdate = ?, healthcardno = ?, memo = ?, agentid = ?, mobile = ?, phone = ?, email = ?, other = ?, birthdate = ? WHERE id = ?",
+                "item": "[item.customername, item.street, item.city, item.province, item.postalcode, item.idtype, item.idno, item.registerdate, item.healthcardno, item.memo, item.agentid, item.mobile, item.phone, item.email, item.other, item.birthdate, id]"
+            },
+            "UpdateAny": "UPDATE customers SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM customers",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM customers WHERE {condition}"
+        }
+    },
+    "custreadings": {
+        "tablename": "custreadings",
+        "description": "客户用卡记录",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "customerid": 0,
+            "stripid": 0,
+            "reading": 0,
+            "temperature": 0,
+            "location": null,
+            "pixel": null,
+            "timestamp": null,
+            "memo": null,
+            "striptypeid": 0
+        },
+        "query": {
+            "SelectAny": "SELECT id, customerid, stripid, reading, temperature, location, pixel, timestamp, memo, striptypeid FROM custreadings WHERE ?? = ?",
+            "SelectAll": "SELECT id, customerid, stripid, reading, temperature, location, pixel, timestamp, memo, striptypeid FROM custreadings",
+            "SelectById": "SELECT id, customerid, stripid, reading, temperature, location, pixel, timestamp, memo, striptypeid FROM custreadings WHERE id = ?",
+            "Paging": "SELECT id, customerid, stripid, reading, temperature, location, pixel, timestamp, memo, striptypeid FROM custreadings ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM custreadings WHERE ?? = ?",
+            "Insert": "INSERT INTO custreadings SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO custreadings (customerid, stripid, reading, temperature, location, pixel, timestamp, memo, striptypeid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.customerid, item.stripid, item.reading, item.temperature, item.location, item.pixel, item.timestamp, item.memo, item.striptypeid]"
+            },
+            "Update": {
+                "sql": "UPDATE custreadings SET customerid = ?, stripid = ?, reading = ?, temperature = ?, location = ?, pixel = ?, timestamp = ?, memo = ?, striptypeid = ? WHERE id = ?",
+                "item": "[item.customerid, item.stripid, item.reading, item.temperature, item.location, item.pixel, item.timestamp, item.memo, item.striptypeid, id]"
+            },
+            "UpdateAny": "UPDATE custreadings SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM custreadings",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM custreadings WHERE {condition}"
+        }
+    },
+    "roles": {
+        "tablename": "roles",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "role": null,
+            "descr": null,
+            "createdby": 0,
+            "createdate": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, role, descr, createdby, createdate FROM roles WHERE ?? = ?",
+            "SelectAll": "SELECT id, role, descr, createdby, createdate FROM roles",
+            "SelectById": "SELECT id, role, descr, createdby, createdate FROM roles WHERE id = ?",
+            "Paging": "SELECT id, role, descr, createdby, createdate FROM roles ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM roles WHERE ?? = ?",
+            "Insert": "INSERT INTO roles SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO roles (role, descr, createdby) VALUES (?, ?, ?)",
+                "item": "[item.role, item.descr, item.createdby]"
+            },
+            "Update": {
+                "sql": "UPDATE roles SET role = ?, descr = ? WHERE id = ?",
+                "item": "[item.role, item.descr, id]"
+            },
+            "UpdateAny": "UPDATE roles SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM roles",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM roles WHERE {condition}"
+        }
+    },
+    "sellers": {
+        "tablename": "sellers",
+        "description": "试纸卡经销商",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "name": "",
+            "street": "",
+            "city": "",
+            "province": null,
+            "postalcode": null,
+            "contact": null,
+            "title": null,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "website": null,
+            "status": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "memo": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM sellers WHERE ?? = ?",
+            "SelectAll": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM sellers",
+            "SelectById": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM sellers WHERE id = ?",
+            "Paging": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM sellers ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM sellers WHERE ?? = ?",
+            "Insert": "INSERT INTO sellers SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO sellers (name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, memo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.name, item.street, item.city, item.province, item.postalcode, item.contact, item.title, item.mobile, item.phone, item.email, item.website, item.status, item.createdby, item.memo]"
+            },
+            "Update": {
+                "sql": "UPDATE sellers SET name = ?, street = ?, city = ?, province = ?, postalcode = ?, contact = ?, title = ?, mobile = ?, phone = ?, email = ?, website = ?, status = ?, updatedby = ?, memo = ? WHERE id = ?",
+                "item": "[item.name, item.street, item.city, item.province, item.postalcode, item.contact, item.title, item.mobile, item.phone, item.email, item.website, item.status, item.updatedby, item.memo, id]"
+            },
+            "UpdateAny": "UPDATE sellers SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM sellers",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM sellers WHERE {condition}"
+        }
+    },
+    "stripbatches": {
+        "tablename": "stripbatches",
+        "description": "试纸卡批号",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "vendorstripid": 0,
+            "batchno": "",
+            "upc": null,
+            "memo": null,
+            "pack": null,
+            "storage": null,
+            "algrith": null,
+            "productiondate": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "deleted": false
+        },
+        "query": {
+            "SelectAny": "SELECT id, vendorstripid, batchno, upc, memo, pack, storage, algrith, productiondate, createdby, createdate, updatedby, updatedate, deleted FROM stripbatches WHERE ?? = ?",
+            "SelectAll": "SELECT id, vendorstripid, batchno, upc, memo, pack, storage, algrith, productiondate, createdby, createdate, updatedby, updatedate, deleted FROM stripbatches",
+            "SelectById": "SELECT id, vendorstripid, batchno, upc, memo, pack, storage, algrith, productiondate, createdby, createdate, updatedby, updatedate, deleted FROM stripbatches WHERE id = ?",
+            "Paging": "SELECT id, vendorstripid, batchno, upc, memo, pack, storage, algrith, productiondate, createdby, createdate, updatedby, updatedate, deleted FROM stripbatches ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM stripbatches WHERE ?? = ?",
+            "Insert": "INSERT INTO stripbatches SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO stripbatches (vendorstripid, batchno, upc, memo, pack, storage, algrith, productiondate, createdby, deleted) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.vendorstripid, item.batchno, item.upc, item.memo, item.pack, item.storage, item.algrith, item.productiondate, item.createdby, item.deleted]"
+            },
+            "Update": {
+                "sql": "UPDATE stripbatches SET vendorstripid = ?, batchno = ?, upc = ?, memo = ?, pack = ?, storage = ?, algrith = ?, productiondate = ?, updatedby = ?, deleted = ? WHERE id = ?",
+                "item": "[item.vendorstripid, item.batchno, item.upc, item.memo, item.pack, item.storage, item.algrith, item.productiondate, item.updatedby, item.deleted, id]"
+            },
+            "UpdateAny": "UPDATE stripbatches SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM stripbatches",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM stripbatches WHERE {condition}"
+        }
+    },
+    "strips": {
+        "tablename": "strips",
+        "description": "试纸卡",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "batchid": 0,
+            "upc": "",
+            "productiondate": null,
+            "expirydate": null,
+            "totalunits": 0,
+            "unitsused": 0,
+            "memo": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "deleted": false,
+            "buydate": null,
+            "buyerid": 0,
+            "unitprice": 0,
+            "cost": 0,
+            "sellerid": 0,
+            "shipdate": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, batchid, upc, productiondate, expirydate, totalunits, unitsused, memo, createdby, createdate, updatedby, updatedate, deleted, buydate, buyerid, unitprice, cost, sellerid, shipdate FROM strips WHERE ?? = ?",
+            "SelectAll": "SELECT id, batchid, upc, productiondate, expirydate, totalunits, unitsused, memo, createdby, createdate, updatedby, updatedate, deleted, buydate, buyerid, unitprice, cost, sellerid, shipdate FROM strips",
+            "SelectById": "SELECT id, batchid, upc, productiondate, expirydate, totalunits, unitsused, memo, createdby, createdate, updatedby, updatedate, deleted, buydate, buyerid, unitprice, cost, sellerid, shipdate FROM strips WHERE id = ?",
+            "Paging": "SELECT id, batchid, upc, productiondate, expirydate, totalunits, unitsused, memo, createdby, createdate, updatedby, updatedate, deleted, buydate, buyerid, unitprice, cost, sellerid, shipdate FROM strips ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM strips WHERE ?? = ?",
+            "Insert": "INSERT INTO strips SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO strips (batchid, upc, productiondate, expirydate, totalunits, unitsused, memo, createdby, deleted, buydate, buyerid, unitprice, cost, sellerid, shipdate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.batchid, item.upc, item.productiondate, item.expirydate, item.totalunits, item.unitsused, item.memo, item.createdby, item.deleted, item.buydate, item.buyerid, item.unitprice, item.cost, item.sellerid, item.shipdate]"
+            },
+            "Update": {
+                "sql": "UPDATE strips SET batchid = ?, upc = ?, productiondate = ?, expirydate = ?, totalunits = ?, unitsused = ?, memo = ?, updatedby = ?, deleted = ?, buydate = ?, buyerid = ?, unitprice = ?, cost = ?, sellerid = ?, shipdate = ? WHERE id = ?",
+                "item": "[item.batchid, item.upc, item.productiondate, item.expirydate, item.totalunits, item.unitsused, item.memo, item.updatedby, item.deleted, item.buydate, item.buyerid, item.unitprice, item.cost, item.sellerid, item.shipdate, id]"
+            },
+            "UpdateAny": "UPDATE strips SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM strips",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM strips WHERE {condition}"
+        }
+    },
+    "striptypes": {
+        "tablename": "striptypes",
+        "description": "试纸卡类别",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "strip": "",
+            "stripen": null,
+            "usage": "",
+            "usageen": null,
+            "memo": null,
+            "createdy": 0,
+            "createdate": null,
+            "updatedy": 0,
+            "updatedate": null,
+            "deleted": false
+        },
+        "query": {
+            "SelectAny": "SELECT id, strip, stripen, usage, usageen, memo, createdy, createdate, updatedy, updatedate, deleted FROM striptypes WHERE ?? = ?",
+            "SelectAll": "SELECT id, strip, stripen, usage, usageen, memo, createdy, createdate, updatedy, updatedate, deleted FROM striptypes",
+            "SelectById": "SELECT id, strip, stripen, usage, usageen, memo, createdy, createdate, updatedy, updatedate, deleted FROM striptypes WHERE id = ?",
+            "Paging": "SELECT id, strip, stripen, usage, usageen, memo, createdy, createdate, updatedy, updatedate, deleted FROM striptypes ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM striptypes WHERE ?? = ?",
+            "Insert": "INSERT INTO striptypes SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO striptypes (strip, stripen, usage, usageen, memo, createdy, updatedy, deleted) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.strip, item.stripen, item.usage, item.usageen, item.memo, item.createdy, item.updatedy, item.deleted]"
+            },
+            "Update": {
+                "sql": "UPDATE striptypes SET strip = ?, stripen = ?, usage = ?, usageen = ?, memo = ?, createdy = ?, updatedy = ?, deleted = ? WHERE id = ?",
+                "item": "[item.strip, item.stripen, item.usage, item.usageen, item.memo, item.createdy, item.updatedy, item.deleted, id]"
+            },
+            "UpdateAny": "UPDATE striptypes SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM striptypes",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM striptypes WHERE {condition}"
+        }
+    },
+    "userprofile": {
+        "tablename": "userprofile",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "fullname": "",
+            "title": null,
+            "dept": null,
+            "street": "",
+            "city": "",
+            "province": null,
+            "postalcode": null,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "Other": null,
+            "website": null,
+            "status": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "memo": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, fullname, title, dept, street, city, province, postalcode, mobile, phone, email, Other, website, status, createdby, createdate, updatedby, updatedate, memo FROM userprofile WHERE ?? = ?",
+            "SelectAll": "SELECT id, fullname, title, dept, street, city, province, postalcode, mobile, phone, email, Other, website, status, createdby, createdate, updatedby, updatedate, memo FROM userprofile",
+            "SelectById": "SELECT id, fullname, title, dept, street, city, province, postalcode, mobile, phone, email, Other, website, status, createdby, createdate, updatedby, updatedate, memo FROM userprofile WHERE id = ?",
+            "Paging": "SELECT id, fullname, title, dept, street, city, province, postalcode, mobile, phone, email, Other, website, status, createdby, createdate, updatedby, updatedate, memo FROM userprofile ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM userprofile WHERE ?? = ?",
+            "Insert": "INSERT INTO userprofile SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO userprofile (fullname, title, dept, street, city, province, postalcode, mobile, phone, email, Other, website, status, createdby, memo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.fullname, item.title, item.dept, item.street, item.city, item.province, item.postalcode, item.mobile, item.phone, item.email, item.Other, item.website, item.status, item.createdby, item.memo]"
+            },
+            "Update": {
+                "sql": "UPDATE userprofile SET fullname = ?, title = ?, dept = ?, street = ?, city = ?, province = ?, postalcode = ?, mobile = ?, phone = ?, email = ?, Other = ?, website = ?, status = ?, updatedby = ?, memo = ? WHERE id = ?",
+                "item": "[item.fullname, item.title, item.dept, item.street, item.city, item.province, item.postalcode, item.mobile, item.phone, item.email, item.Other, item.website, item.status, item.updatedby, item.memo, id]"
+            },
+            "UpdateAny": "UPDATE userprofile SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM userprofile",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM userprofile WHERE {condition}"
+        }
+    },
+    "userroles": {
+        "tablename": "userroles",
+        "description": "用户角色表",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "userid",
+        "model": {
+            "userid": 0,
+            "roleid": 0,
+            "createdby": 0,
+            "createdate": null
+        },
+        "query": {
+            "SelectAny": "SELECT userid, roleid, createdby, createdate FROM userroles WHERE ?? = ?",
+            "SelectAll": "SELECT userid, roleid, createdby, createdate FROM userroles",
+            "SelectById": "SELECT userid, roleid, createdby, createdate FROM userroles WHERE id = ?",
+            "Paging": "SELECT userid, roleid, createdby, createdate FROM userroles ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM userroles WHERE ?? = ?",
+            "Insert": "INSERT INTO userroles SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO userroles (userid, roleid, createdby) VALUES (?, ?, ?)",
+                "item": "[item.userid, item.roleid, item.createdby]"
+            },
+            "Update": {
+                "sql": "UPDATE userroles SET userid = ?, roleid = ? WHERE id = ?",
+                "item": "[item.userid, item.roleid, id]"
+            },
+            "UpdateAny": "UPDATE userroles SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM userroles",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM userroles WHERE {condition}"
+        }
+    },
+    "users": {
+        "tablename": "users",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "username": "",
+            "password": "",
+            "enabled": null,
+            "loggedOn": null,
+            "logggedoff": null,
+            "retris": null,
+            "mustchangepwd": null,
+            "locked": null,
+            "vendorid": 0
+        },
+        "query": {
+            "SelectAny": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users WHERE ?? = ?",
+            "SelectAll": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users",
+            "SelectById": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users WHERE id = ?",
+            "Paging": "SELECT id, username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid FROM users ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM users WHERE ?? = ?",
+            "Insert": "INSERT INTO users SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO users (username, password, enabled, loggedOn, logggedoff, retris, mustchangepwd, locked, vendorid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.username, item.password, item.enabled, item.loggedOn, item.logggedoff, item.retris, item.mustchangepwd, item.locked, item.vendorid]"
+            },
+            "Update": {
+                "sql": "UPDATE users SET username = ?, password = ?, enabled = ?, loggedOn = ?, logggedoff = ?, retris = ?, mustchangepwd = ?, locked = ?, vendorid = ? WHERE id = ?",
+                "item": "[item.username, item.password, item.enabled, item.loggedOn, item.logggedoff, item.retris, item.mustchangepwd, item.locked, item.vendorid, id]"
+            },
+            "UpdateAny": "UPDATE users SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM users",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM users WHERE {condition}"
+        }
+    },
+    "usertable": {
+        "tablename": "usertable",
+        "description": "",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "userId",
+        "model": {
+            "userId": 0,
+            "username": "",
+            "password": ""
+        },
+        "query": {
+            "SelectAny": "SELECT userId, username, password FROM usertable WHERE ?? = ?",
+            "SelectAll": "SELECT userId, username, password FROM usertable",
+            "SelectById": "SELECT userId, username, password FROM usertable WHERE id = ?",
+            "Paging": "SELECT userId, username, password FROM usertable ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM usertable WHERE ?? = ?",
+            "Insert": "INSERT INTO usertable SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO usertable (userId, username, password) VALUES (?, ?, ?)",
+                "item": "[item.userId, item.username, item.password]"
+            },
+            "Update": {
+                "sql": "UPDATE usertable SET userId = ?, username = ?, password = ? WHERE id = ?",
+                "item": "[item.userId, item.username, item.password, id]"
+            },
+            "UpdateAny": "UPDATE usertable SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM usertable",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM usertable WHERE {condition}"
+        }
+    },
+    "vendors": {
+        "tablename": "vendors",
+        "description": "试纸卡厂家或代理商",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "name": "",
+            "street": "",
+            "city": "",
+            "province": null,
+            "postalcode": null,
+            "contact": null,
+            "title": null,
+            "mobile": null,
+            "phone": null,
+            "email": null,
+            "website": null,
+            "status": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedby": 0,
+            "updatedate": null,
+            "memo": null
+        },
+        "query": {
+            "SelectAny": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM vendors WHERE ?? = ?",
+            "SelectAll": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM vendors",
+            "SelectById": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM vendors WHERE id = ?",
+            "Paging": "SELECT id, name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, createdate, updatedby, updatedate, memo FROM vendors ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM vendors WHERE ?? = ?",
+            "Insert": "INSERT INTO vendors SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO vendors (name, street, city, province, postalcode, contact, title, mobile, phone, email, website, status, createdby, memo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.name, item.street, item.city, item.province, item.postalcode, item.contact, item.title, item.mobile, item.phone, item.email, item.website, item.status, item.createdby, item.memo]"
+            },
+            "Update": {
+                "sql": "UPDATE vendors SET name = ?, street = ?, city = ?, province = ?, postalcode = ?, contact = ?, title = ?, mobile = ?, phone = ?, email = ?, website = ?, status = ?, updatedby = ?, memo = ? WHERE id = ?",
+                "item": "[item.name, item.street, item.city, item.province, item.postalcode, item.contact, item.title, item.mobile, item.phone, item.email, item.website, item.status, item.updatedby, item.memo, id]"
+            },
+            "UpdateAny": "UPDATE vendors SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM vendors",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM vendors WHERE {condition}"
+        }
+    },
+    "vendorstrips": {
+        "tablename": "vendorstrips",
+        "description": "胶体金试纸卡",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": "id",
+        "model": {
+            "id": 0,
+            "striptypeid": 0,
+            "vendorid": 0,
+            "licenseno": "",
+            "issedby": "",
+            "issueddate": null,
+            "memo1": null,
+            "memo2": null,
+            "udfdate1": null,
+            "udfdate2": null,
+            "createdby": 0,
+            "createdate": null,
+            "updatedy": 0,
+            "updatedate": null,
+            "deleted": false
+        },
+        "query": {
+            "SelectAny": "SELECT id, striptypeid, vendorid, licenseno, issedby, issueddate, memo1, memo2, udfdate1, udfdate2, createdby, createdate, updatedy, updatedate, deleted FROM vendorstrips WHERE ?? = ?",
+            "SelectAll": "SELECT id, striptypeid, vendorid, licenseno, issedby, issueddate, memo1, memo2, udfdate1, udfdate2, createdby, createdate, updatedy, updatedate, deleted FROM vendorstrips",
+            "SelectById": "SELECT id, striptypeid, vendorid, licenseno, issedby, issueddate, memo1, memo2, udfdate1, udfdate2, createdby, createdate, updatedy, updatedate, deleted FROM vendorstrips WHERE id = ?",
+            "Paging": "SELECT id, striptypeid, vendorid, licenseno, issedby, issueddate, memo1, memo2, udfdate1, udfdate2, createdby, createdate, updatedy, updatedate, deleted FROM vendorstrips ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM vendorstrips WHERE ?? = ?",
+            "Insert": "INSERT INTO vendorstrips SET ?",
+            "Insert2": {
+                "sql": "INSERT INTO vendorstrips (striptypeid, vendorid, licenseno, issedby, issueddate, memo1, memo2, udfdate1, udfdate2, createdby, updatedy, deleted) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                "item": "[item.striptypeid, item.vendorid, item.licenseno, item.issedby, item.issueddate, item.memo1, item.memo2, item.udfdate1, item.udfdate2, item.createdby, item.updatedy, item.deleted]"
+            },
+            "Update": {
+                "sql": "UPDATE vendorstrips SET striptypeid = ?, vendorid = ?, licenseno = ?, issedby = ?, issueddate = ?, memo1 = ?, memo2 = ?, udfdate1 = ?, udfdate2 = ?, updatedy = ?, deleted = ? WHERE id = ?",
+                "item": "[item.striptypeid, item.vendorid, item.licenseno, item.issedby, item.issueddate, item.memo1, item.memo2, item.udfdate1, item.udfdate2, item.updatedy, item.deleted, id]"
+            },
+            "UpdateAny": "UPDATE vendorstrips SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM vendorstrips",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM vendorstrips WHERE {condition}"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "userroles": {
+        "tablename": "userroles",
+        "description": "用户角色表",
+        "auditing": false,
+        "catalog": "system",
+        "idfield": [
+            "userid",
+            "roleid"
+        ],
+        "model": {
+            "userid": 0,
+            "roleid": 0,
+            "createdby": 0,
+            "createdate": null
+        },
+        "query": {
+            "SelectAny": "SELECT userid, roleid, createdby, createdate FROM userroles WHERE ?? = ?",
+            "SelectAll": "SELECT userid, roleid, createdby, createdate FROM userroles",
+            "SelectById": "SELECT userid, roleid, createdby, createdate FROM userroles WHERE id = ?",
+            "Paging": "SELECT userid, roleid, createdby, createdate FROM userroles ORDER BY ?? LIMIT ? OFFSET ?",
+            "DeleteById": "DELETE FROM userroles WHERE id = ?",
+            "Insert": "INSERT INTO userroles SET ?",
+            "UpdateAny": "UPDATE userroles SET ?? = ? WHERE ?? = ?",
+            "SelectCount": "SELECT COUNT(*) as itemamount FROM userroles",
+            "SelectCountAny": "SELECT COUNT(*) as itemamount FROM userroles WHERE {condition}"
+        }
+    }
+}

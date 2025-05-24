@@ -1,0 +1,23 @@
+[
+	{
+		"id" : 1,
+		"role" : "admin",
+		"descr" : "系统管理员",
+		"createdby" : 0,
+		"createdate" : "2022-02-05 19:21:53"
+	},
+	{
+		"id" : 2,
+		"role" : "management",
+		"descr" : "数据管理",
+		"createdby" : 0,
+		"createdate" : "2022-02-05 19:21:53"
+	},
+	{
+		"id" : 3,
+		"role" : "customerservice",
+		"descr" : "客户服务中心",
+		"createdby" : 0,
+		"createdate" : "2022-02-05 19:21:54"
+	}
+]
