@@ -15,25 +15,25 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^6.0.0-alpha.5",
-    "chance": "^1.1.8",
-    "dotenv": "^10.0.0",
-    "nodemon": "^2.0.15",
-    "redis-cli": "^2.1.1"
+    "@faker-js/faker": "^9.8.0",
+    "chance": "^1.1.13",
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10",
+    "redis-cli": "^2.1.2"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
-    "docxtemplater": "^3.28.6",
-    "express": "^4.17.2",
-    "jshint": "^2.13.1",
-    "jsonwebtoken": "^8.5.1",
-    "log4js": "^6.4.1",
+    "docxtemplater": "^3.63.0",
+    "express": "^5.1.0",
+    "jshint": "^2.13.6",
+    "jsonwebtoken": "^9.0.2",
+    "log4js": "^6.9.1",
     "morgan": "^1.10.0",
-    "mysql2": "^2.3.3",
-    "pizzip": "^3.1.1",
-    "redis": "^4.0.1",
-    "rotating-file-stream": "^3.0.2",
-    "sequelize": "^6.15.0"
+    "mysql2": "^3.14.1",
+    "pizzip": "^3.2.0",
+    "redis": "^5.1.0",
+    "rotating-file-stream": "^3.2.6",
+    "sequelize": "^6.37.7"
   }
 }
